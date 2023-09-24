@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUNLIGHT INTENSITY</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style4.css') }}">
+</head>
+<body>
+    <header>
+        <h1>SUNLIGHT INTENSITY</h1>
+    </header>
+    <div class="container">
+        <div class="sunlight-data">
+            <h2>Sunlight Intensity (lx)</h2>
+            <h1 id="sunlight-value">1023 lx</h1>
+            <h2 class="card-title pricing-card-title" id="ldr-status">Sunny Day</h2>
+        </div>
+    </div>
+    <!-- <script src="script2.js"></script> -->
+    <script>
+        function fetchData() {
+            fetch('/ldr')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sunlight-value').textContent = data + " lux";
+                    if (data < 200){
+                        document.getElementById('ldr-status').textContent = "Night Time";
+                    }
+                    else{
+                        document.getElementById('ldr-status').textContent = "Day Time";
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching temperature data:', error);
+                }); 
+          
+        }
+        // Refresh temperature data when the page loads
+        fetchData();
+        // Refresh temperature data every 2 seconds
+        setInterval(fetchData, 3000);
+    </script>
+</body>
+</html>

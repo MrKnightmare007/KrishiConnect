@@ -109,7 +109,7 @@ plt.savefig(os.path.join('static', 'images', 'plot2.png'))
 print("plot generated!")
 
 app = Flask(__name__)
-esp_url = "http://192.168.95.93"
+esp_url = "http://192.168.234.93"
 # Function to fetch temperature data
 def fetch_temperature():
     try:
@@ -162,7 +162,7 @@ def index():
 
 @app.route('/ldr')
 def ldr():
-    ldr = fetch_ldr()
+    ldr= fetch_ldr()
     return ldr
 
 @app.route('/temp')
@@ -189,11 +189,15 @@ def rain():
 def index1():
     return render_template('index1.html')
 
+@app.route('/index4')
+def index4():
+    return render_template('index4.html')
+
 @app.route('/chart_soilms')
 def single_converter():
     soilms_data = [round(i, 3) for i in soil_moisture_predictions]
     return render_template('chart.html', no=future_dates)
 
 
-if __name__ == '__main__':\
+if __name__ == '__main__':
     app.run(debug=True)
