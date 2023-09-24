@@ -54,8 +54,8 @@ access http://localhost:5000 for the website.
 
 ## Authors
 
-- [@aroproduction](https://www.github.com/aroproduction)
 - [@MrKnightmare007](https://github.com/MrKnightmare007)
+- [@aroproduction](https://www.github.com/aroproduction)
 - [@Dhiman-Nayak](https://github.com/Dhiman-Nayak)
 - [@kingshere](https://github.com/kingshere)
 
@@ -73,5 +73,5 @@ access http://localhost:5000 for the website.
 
 ## License
 
-License Free for the time being.
+Licensed @R-(IOT)
 
