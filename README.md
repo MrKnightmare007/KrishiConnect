@@ -7,7 +7,7 @@ A smart IoT-based system for automating, predicting and monitoring farming-relat
 ## Requirements
 
 For hardware part:
-https://github.com/MrKnightmare007/KrishiConnect/hardware.txt
+https://github.com/MrKnightmare007/KrishiConnect/blob/main/hardware.txt
 
 For software part
 ```
@@ -24,6 +24,8 @@ Then switch on the 3 & 4 dip switches on the board.
 Upload the 4_sen_esp.ino file by selecting Arduino Uno as the board.
 
 Repeat the process by switching 5, 6 & 7 switches and selecting ESP8266 as board and final_send_data_flask.ino as the upload file.
+
+Finally for the connection of atmega and esp switch on 1,2,5 & 6 dip switches which will host the sensor values onto different routes.
 
 Then type in terminal:
 
